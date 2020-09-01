@@ -1,0 +1,23 @@
+{
+  "name": "modbus-device-manager",
+  "version": "1.0.0",
+  "description": "Reading and writing modbus devices according to TSL(Thing Specification Language) definitions.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freemanh/modbus-device-manager.git"
+  },
+  "author": "Freeman Han",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freemanh/modbus-device-manager/issues"
+  },
+  "homepage": "https://github.com/freemanh/modbus-device-manager#readme",
+  "dependencies": {
+    "modbus-serial": "^8.0.1"
+  }
+}

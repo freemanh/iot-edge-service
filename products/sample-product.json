@@ -1,0 +1,53 @@
+{
+    "schema-version": "v1",
+    "properties": [
+        {
+            "code": "humidity",
+            "name": "湿度",
+            "accessMode": "ro",
+            "desc": "",
+            "tags": [],
+            "register": {
+                "start": 0,
+                "quantity": 1
+            },
+            "data": {
+                "type": "int",
+                "unit": "RH",
+                "step": 0.1
+            }
+        },
+        {
+            "code": "temperature",
+            "name": "温度",
+            "accessMode": "ro",
+            "desc": "",
+            "tags": [],
+            "register": {
+                "start": 1,
+                "quantity": 1
+            },
+            "data": {
+                "type": "int",
+                "unit": "°C",
+                "step": 0.1
+            }
+        },
+        {
+            "code": "co2",
+            "name": "二氧化碳浓度",
+            "accessMode": "ro",
+            "desc": "",
+            "tags": [],
+            "register": {
+                "start": 2,
+                "quantity": 1
+            },
+            "data": {
+                "type": "int",
+                "unit": "PPM",
+                "step": 1
+            }
+        }
+    ]
+}
