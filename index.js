@@ -35,6 +35,7 @@ client.connectTCP("192.168.0.203", { port: 502 }).then(async () => {
                     val = await client.readInputRegisters(prop.register.start, prop.register.quantity)
                 } else if (prop.readCmd == 1) {
                     val = await client.readCoils(prop.register.start, prop.register.quantity)
+                    //client.writeCoil(prop.register.start, true)
                 }
 
             } catch (e) {
@@ -44,6 +45,7 @@ client.connectTCP("192.168.0.203", { port: 502 }).then(async () => {
 
         }
         console.log(device.data)
+
     }
 
 });
