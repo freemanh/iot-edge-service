@@ -1,8 +1,8 @@
 {
-    "product": "sample-product",
+    "product": "circuit-breaker",
     "code": "serial-code",
-    "name": "大厅空气质量检测仪",
-    "slaveId": 36,
+    "name": "智能空开",
+    "slaveId": 1,
     "interval": 10,
     "notes": "",
     "data": {

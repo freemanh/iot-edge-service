@@ -2,9 +2,10 @@
     "schema-version": "v1",
     "properties": [
         {
-            "code": "humidity",
+            "code": "iot_humidity_rh",
             "name": "湿度",
             "accessMode": "ro",
+            "readCmd": "3",
             "desc": "",
             "tags": [],
             "register": {
@@ -18,9 +19,10 @@
             }
         },
         {
-            "code": "temperature",
+            "code": "iot_temperature_celcius",
             "name": "温度",
             "accessMode": "ro",
+            "readCmd": "3",
             "desc": "",
             "tags": [],
             "register": {
@@ -34,9 +36,10 @@
             }
         },
         {
-            "code": "co2",
+            "code": "iot_co2_ppm",
             "name": "二氧化碳浓度",
             "accessMode": "ro",
+            "readCmd": "3",
             "desc": "",
             "tags": [],
             "register": {

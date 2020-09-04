@@ -1,0 +1,80 @@
+{
+    "schema-version": "v1",
+    "properties": [
+        {
+            "code": "iot_voltage_volt",
+            "name": "电压",
+            "accessMode": "ro",
+            "readCmd": "4",
+            "desc": "",
+            "tags": [
+                "A"
+            ],
+            "register": {
+                "start": 0,
+                "quantity": 2
+            },
+            "data": {
+                "type": "int",
+                "unit": "V",
+                "step": 1
+            }
+        },
+        {
+            "code": "iot_voltage_volt",
+            "name": "电压",
+            "accessMode": "ro",
+            "readCmd": "4",
+            "desc": "",
+            "tags": [
+                "B"
+            ],
+            "register": {
+                "start": 2,
+                "quantity": 2
+            },
+            "data": {
+                "type": "int",
+                "unit": "V",
+                "step": 1
+            }
+        },
+        {
+            "code": "iot_voltage_volt",
+            "name": "电压",
+            "accessMode": "ro",
+            "readCmd": "4",
+            "desc": "",
+            "tags": [
+                "C"
+            ],
+            "register": {
+                "start": 4,
+                "quantity": 2
+            },
+            "data": {
+                "type": "int",
+                "unit": "V",
+                "step": 1
+            }
+        },
+        {
+            "code": "iot_switch",
+            "name": "开关分/合闸状态",
+            "accessMode": "rw",
+            "readCmd": "1",
+            "writeCmd": "5",
+            "desc": "",
+            "tags": [],
+            "register": {
+                "start": 2,
+                "quantity": 2
+            },
+            "data": {
+                "type": "int",
+                "unit": "",
+                "step": 1
+            }
+        }
+    ]
+}
