@@ -12,9 +12,9 @@ var ModbusRTU = require("modbus-serial");
 var client = new ModbusRTU();
 
 // open connection to a tcp line
-client.connectTCP("192.168.0.203", { port: 502 }).then(() => {
+client.connectTCP("192.168.0.203", { port: 502 }).then(async () => {
 
-    devices.forEach(async (device) => {
+    for (let device of devices) {
         let product = JSON.parse(fs.readFileSync(`./products/${device.product}.json`));
 
         console.log(`start to read data of [${device.name}]`)
@@ -26,25 +26,26 @@ client.connectTCP("192.168.0.203", { port: 502 }).then(() => {
 
         client.setID(device.slaveId);
 
-        product.properties.forEach(async (prop) => {
-            console.log(prop.name)
+        for (let prop of product.properties) {
+            try {
+                var val = {}
+                if (prop.readCmd == 3) {
+                    val = await client.readHoldingRegisters(prop.register.start, prop.register.quantity);
+                } else if (prop.readCmd == 4) {
+                    val = await client.readInputRegisters(prop.register.start, prop.register.quantity)
+                } else if (prop.readCmd == 1) {
+                    val = await client.readCoils(prop.register.start, prop.register.quantity)
+                }
 
-            var val = {}
-            if (prop.readCmd == 3) {
-                val = await client.readHoldingRegisters(prop.register.start, prop.register.quantity);
-            } else if (prop.readCmd == 4) {
-                val = await client.readInputRegisters(prop.register.start, prop.register.quantity)
-            } else if (prop.readCmd == 1) {
-                val = await client.readCoils(prop.register.start, prop.register.quantity)
+            } catch (e) {
+                console.log(e)
             }
-
             device.data.items.push({ "index": prop.code, "name": prop.name, "value": val.data[0] * (prop.data.step * 1000) / 1000 })
 
-        });
-
+        }
         console.log(device.data)
+    }
 
-    })
 });
 
 
