@@ -7,7 +7,7 @@
             "accessMode": "ro",
             "readCmd": "3",
             "desc": "",
-            "tags": [],
+            "labels": {},
             "register": {
                 "start": 0,
                 "quantity": 1
@@ -24,7 +24,7 @@
             "accessMode": "ro",
             "readCmd": "3",
             "desc": "",
-            "tags": [],
+            "labels": {},
             "register": {
                 "start": 1,
                 "quantity": 1
@@ -41,7 +41,7 @@
             "accessMode": "ro",
             "readCmd": "3",
             "desc": "",
-            "tags": [],
+            "labels": {},
             "register": {
                 "start": 2,
                 "quantity": 1

@@ -7,9 +7,9 @@
             "accessMode": "ro",
             "readCmd": "4",
             "desc": "",
-            "tags": [
-                "A"
-            ],
+            "labels": {
+                "phase": "A"
+            },
             "register": {
                 "start": 0,
                 "quantity": 2
@@ -26,9 +26,9 @@
             "accessMode": "ro",
             "readCmd": "4",
             "desc": "",
-            "tags": [
-                "B"
-            ],
+            "labels": {
+                "phase": "B"
+            },
             "register": {
                 "start": 2,
                 "quantity": 2
@@ -45,9 +45,9 @@
             "accessMode": "ro",
             "readCmd": "4",
             "desc": "",
-            "tags": [
-                "C"
-            ],
+            "labels": {
+                "phase": "C"
+            },
             "register": {
                 "start": 4,
                 "quantity": 2
@@ -65,7 +65,7 @@
             "readCmd": "1",
             "writeCmd": "5",
             "desc": "",
-            "tags": [],
+            "labels": {},
             "register": {
                 "start": 2,
                 "quantity": 2
