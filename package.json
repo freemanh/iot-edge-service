@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/freemanh/modbus-device-manager.git"
+    "url": "git+https://github.com/freemanh/iot-edge-service.git"
   },
   "author": "Freeman Han",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/freemanh/modbus-device-manager/issues"
+    "url": "https://github.com/freemanh/iot-edge-service/issues"
   },
-  "homepage": "https://github.com/freemanh/modbus-device-manager#readme",
+  "homepage": "https://github.com/freemanh/iot-edge-service#readme",
   "dependencies": {
     "modbus-serial": "^8.0.1"
   }
